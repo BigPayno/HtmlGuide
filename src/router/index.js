@@ -4,11 +4,11 @@ import HelloWorld from '@/components/HelloWorld'
 import Index from '@/components/Index'
 import Table from '@/components/Table'
 import Form from '@/components/Form'
+import Popover from '@/components/Popover'
 
 Vue.use(Router)
 
-export default new Router({
-  routes: [
+var routes = [
     {
       path: '/HelloWorld',
       name: 'HelloWorld',
@@ -25,6 +25,15 @@ export default new Router({
       path: '/Form',
       name: 'Form',
       component: Form,
+    },{
+      path: '/Popover',
+      name: 'Popover',
+      component: Popover,
     }
-  ]
+ ];
+
+export default new Router({
+  routes: routes
 })
+
+export { routes as routes }
